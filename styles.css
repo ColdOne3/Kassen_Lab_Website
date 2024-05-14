@@ -1,0 +1,622 @@
+/* styles.css */
+
+
+/*Body*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark Gray */
+    color: #dddddd; /* Light Gray */
+}
+
+/*Logo*/
+
+header {
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 26px;
+    left: 10px;
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/*hero*/
+
+.hero {
+    position: relative;
+    padding: 100px 0; /* Adjust vertical padding as needed */
+    height: 500px; /* Set a fixed height for the hero section */
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+    font-size: 10px; /* Adjust font size */
+    color: white; /* Text color */
+}
+
+.hero img {
+    width: 400px; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0; /* Remove default margin */
+    color: #4db6ac; /* Teal */
+    margin-bottom: 20px; /* Add padding underneath the text */
+}
+
+.hero p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80%;
+    margin: 0; /* Remove default margin */
+    margin-bottom: 20px; /* Add padding underneath the text */
+}
+
+
+.hero p span {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero p span.fadeIn {
+    opacity: 1;
+}
+
+.hero p span.little {
+    font-size: 0.8em; /* Adjust the font size smaller */
+}
+
+.hero p span.big {
+    font-size: 1.6em; /* Adjust the font size bigger */
+}
+
+
+
+header {
+    background-color: #333333; /* Dark Gray */
+    color: #dddddd; /* Light Gray */
+    padding: 20px;
+    text-align: center;
+}
+
+/*Home slideshow*/
+
+.slideshow-container {
+    width: 50%; /* Set slideshow width */
+    position: relative;
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
+}
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color */
+    padding: 10px;
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Initially hide arrows */
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Change background color on hover */
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+
+
+/* Navigation bar */
+nav {
+    background-color: #555555; /* Gray */
+    color: #dddddd; /* Light Gray */
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: opacity 0.8s ease;
+    opacity: 1;
+}
+
+nav.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #dddddd; /* Light Gray */
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4db6ac; /* Teal */
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #333333; /* Dark Gray */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #dddddd; /* Light Gray */
+}
+
+h4 {
+    color: #4db6ac; /* Teal */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/*Footer*/
+footer {
+    background: none;
+    border: none;
+    color: #ffffff; /* White */
+    line-height: 1.6;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
+/* Research*/
+#research {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    height: auto;
+    padding: 20px 0;
+}
+
+.card {
+    position: relative;
+    flex: 0 0 auto;
+    margin: 0 10px;
+    border: 1px solid #555555;
+    border-radius: 8px;
+    transition: flex 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #555555;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 0;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    color: #4db6ac;
+    z-index: 1;
+    transition: top 0.5s ease-in-out, padding 0.5s ease-in-out; /* Transition for top position and padding */
+}
+
+.card.active h3 {
+    top: 20px; /* Shift title to the top */
+    padding: 40px 0; /* Increase padding when active */
+}
+
+
+.card .content.fade-in {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out 1.5s; /* Fade-in transition with delay */
+}
+
+.card .content {
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out; /* Faster fade-out transition */
+    flex: 1 1 auto; /* Allow content to grow to fill remaining space */
+}
+
+.card.active h3 {
+    padding: 25px 0; /* Increase padding when active */
+}
+
+.card.active .content {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out; /* Fade-in transition duration */
+}
+
+.card.active {
+    flex: 0 0 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: flex 0.5s ease-in-out; /* Slightly slower transition when active */
+}
+
+.card:not(.active) {
+    flex: 0 0 200px;
+    transition: flex 0.5s ease-in-out; /* Faster transition when not active */
+}
+
+.card.active ~ .card {
+    flex: 0 0 200px;
+    transition: flex 0.5s ease-in-out; /* Faster transition for adjacent cards */
+}
+
+.card .content p {
+    margin-top: 20px; /* Add some spacing between the text and the image */
+}
+
+.card .card-image {
+    width: 40%; /* Ensure all images fill the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the entire image fills the container */
+    position: absolute; /* Position the image absolutely */
+    left: 50%; /* Move the image to the center horizontally */
+    bottom: 10px; /* Position the image 10px from the bottom */
+    transform: translateX(-50%); /* Center the image horizontally */
+}
+
+/*Beyond the Bench*/
+#Beyond the Bench {
+    margin-top: 30px; /* Adjust as needed */
+}
+
+.organization {
+    width: calc(20% - 20px); /* Adjust width as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+.organization h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.organization p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.visit-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #4db6ac;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.visit-button:hover {
+    background-color: #357a79;
+}
+
+.organization img {
+    display: block;
+    margin: 20px auto; /* Adjust margin as needed */
+    max-width: 60%;
+    height: auto;
+}
+
+
+/*Members*/
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.member {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.member img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Justify text */
+.member p {
+    text-align: justify;
+}
+
+/* Allow text to span from one margin to the other for Principal Investigator and Research Associate */
+.member.PI p,
+.member.research.Associate p {
+    width: 100%;
+    text-align: justify;
+}
+
+.member img {
+    display: block;
+    width: 200px;  /* Set desired width */
+    height: auto;  /* Automatically calculate height to maintain aspect ratio */
+    margin-bottom: 10px;
+}
+
+/*Book*/
+
+.book-section {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.book-image {
+    flex-basis: 50%; /* Takes half width */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.book-image img {
+    width: 400px; /* Adjust to fill the container */
+    height: auto;
+}
+
+.book-info {
+    flex-basis: 50%; /* Takes half width */
+    text-align: left; /* Align text to left */
+}
+
+.book-info h3 {
+    text-align: center;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+.book-description {
+    text-align: left; /* Align text to left */
+    margin: 0 auto; /* Center the description */
+}
+
+.order-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #4db6ac; /* Teal */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Take full width */
+    max-width: 300px; /* Maximum width for the link */
+    margin: 0 auto; /* Center the link */
+}
+
+.order-link:hover {
+    background-color: #32756f; /* Darker color on hover */
+}
+
+/*Selected publications*/
+#curated-publications {
+    margin-bottom: 20px;
+    padding-bottom: 20px; /* Add padding at the bottom for additional space */
+    overflow: auto; /* Add overflow to contain floated elements */
+}
+
+.curated-publication {
+    width: calc(33.33% - 20px); /* Adjust width and margin to accommodate padding */
+    margin-bottom: 20px; /* Add margin at the bottom to prevent dropping down */
+    float: left;
+    padding: 10px; /* Add padding to each curated publication */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.curated-publication:last-child {
+    margin-right: 0;
+}
+
+.curated-publication h3 {
+    margin-top: 0;
+}
+
+.curated-publication p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4db6ac;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #32756f;
+}
+
+
+/* Hide publication lists initially */
+.publication-list {
+    display: none;
+}
+
+/* Style toggle buttons */
+
+.toggle-year {
+    background-color: #4db6ac;
+    color:#ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+/* Hover effect */
+.toggle-year:hover {
+    background-color: #32756f; /* Darker Gray */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+.button {
+    background-color: #4db6ac; /* Teal color */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #32756f; /* Darker teal color on hover */
+}
+
+/*Gallery*/
+#gallery {
+    position: relative; 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#gallery-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin: 0;
+    z-index: 1;
+}
+
+.image {
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust flex-basis to fit three images per row */
+}
+
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+/*Rees email button*/
+
+.contact-info button {
+    background-color: #4db6ac; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding around button text */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.contact-info button:hover {
+    background-color: #388e83; /* Darken button background color on hover */
+}
+
